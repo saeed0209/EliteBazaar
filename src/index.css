@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@layer base {
+  html {
+    @apply transition-colors duration-300;
+  }
+  body {
+    @apply bg-white dark:bg-gray-900 dark:text-gray-100;
+  }
+}
+
+@layer components {
+/* Primary clr #FEA928 and secondary #ed8900 */
+  .primary {
+    @apply bg-[#FEA92866];
+  }
+  .secondary {
+    @apply bg-[#ed8900];
+  }
+  .container {
+    @apply text-center
+       pl-4 pr-4        /* base: 1rem */
+       sm:pl-6 sm:pr-6  /* sm: 1.5rem */
+       md:pl-8 md:pr-8  /* md: 2rem */
+       lg:pl-12 lg:pr-12/* lg: 3rem */
+       xl:pl-16 xl:pr-16/* xl: 4rem */
+       2xl:pl-20 2xl:pr-20; /* 2xl: 5rem */
+  }
+}
